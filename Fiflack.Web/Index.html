@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="_clientApp/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="_clientApp/css/toaster.min.css" rel="stylesheet" />
+    <link href="_clientApp/css/style.css" rel="stylesheet" />
+
+    <title>FIFLACK</title>
+</head>
+<body ng-app="Fiflack">
+
+    <ui-view class="container"></ui-view>
+    <toaster-container></toaster-container>
+
+    <!--bootstrap-->
+    <script src="_clientApp/library/jquery-3.3.1.slim.min.js"></script>
+    <script src="_clientApp/library/popper.min.js"></script>
+    <script src="_clientApp/library/bootstrap.min.js"></script>
+
+    <!--angular-->
+    <script src="_clientApp/library/angular.min.js"></script>
+    <script src="_clientApp/library/angular-touch.min.js"></script>
+    <script src="_clientApp/library/angular-animate.min.js"></script>
+    <script src="_clientApp/library/angular-sanitize.min.js"></script>
+    <script src="_clientApp/library/angular-ui-router.min.js"></script>
+    <script src="_clientApp/library/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    <script src="_clientApp/library/toaster.min.js"></script>
+
+    <!--services-->
+    <script src="_clientApp/src/services/playersService.js"></script>
+    <script src="_clientApp/src/services/competitionsService.js"></script>
+    <script src="_clientApp/src/services/matchScoresService.js"></script>
+    <script src="_clientApp/src/services/questionDlgService.js"></script>
+    <script src="_clientApp/src/services/toasterService.js"></script>
+
+    <!--directives-->
+    <script src="_clientApp/src/directives/playerLoginDirective.js"></script>
+
+    <!--controllers-->
+    <script src="_clientApp/src/states/Players/playersController.js"></script>
+    <script src="_clientApp/src/states/Players/editPlayerDlgController.js"></script>
+    <script src="_clientApp/src/common/QuestionDlg/questionDlgController.js"></script>
+    <script src="_clientApp/src/states/Competitions/competitionsController.js"></script>
+    <script src="_clientApp/src/states/Competition/competitionController.js"></script>
+    <script src="_clientApp/src/states/newMatch/newMatchController.js"></script>
+    <script src="_clientApp/src/states/Main/mainController.js"></script>
+
+    <!--app-->
+    <script src="_clientApp/src/config.js"></script>
+    <script src="_clientApp/src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<div class="container">
+
+    <form name="newMatch">
+        <h4>Nowy mecz - rozgrywka #{{$ctrl.competition.index}}</h4>
+
+        <table>
+            <tr>
+                <td>
+                    <select 
+                        ng-model="$ctrl.player1"
+                        ng-change="$ctrl.onChangePlayer1()"
+                        ng-options="player.name for player in $ctrl.players">
+                    </select>
+                </td>
+
+                <td>
+                    <input type="int" name="playerGoals_1" ng-model="$ctrl.playerGoals_1" />
+                </td>
+
+                <td>
+                    <label>:</label>
+                </td>
+
+                <td>
+                    <input type="int" name="playerGoals_2" ng-model="$ctrl.playerGoals_2" />
+                </td>
+
+                <td>
+                    <select ng-model="$ctrl.player2"
+                            ng-change="$ctrl.onChangePlayer2()"
+                            ng-options="player.name for player in $ctrl.players"></select>
+                </td>
+            </tr>
+
+
+        </table>
+
+        <input type="submit" ng-click="$ctrl.saveScore()" value="Zapisz wynik"> 
+    </form>
+
+
+
+</div>

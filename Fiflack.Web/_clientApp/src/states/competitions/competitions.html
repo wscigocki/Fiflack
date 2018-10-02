@@ -1,0 +1,13 @@
+﻿<div class="container">
+
+    <h4>Rozgrywki</h4>
+
+    <ul>
+        <li ng-repeat="competition in $ctrl.competitions">
+            <a ui-sref="competition({id: competition.id})">
+                Rozgrywka #{{competition.index}} ({{competition.dateTime}})
+            </a>
+        </li>
+
+    </ul>
+</div>

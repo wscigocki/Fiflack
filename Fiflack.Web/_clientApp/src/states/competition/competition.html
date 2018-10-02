@@ -1,0 +1,16 @@
+﻿<div class="container">
+
+    <h4>Rozgrywka #{{$ctrl.competition.index}}</h4>
+
+    <div>
+        <a ui-sref="newCompetitionMatch({id: {{$ctrl.competition.id}}})">Nowy mecz</a>
+    </div>
+
+    <table>
+        <tr ng-repeat="matchScore in $ctrl.matchScores">
+            <td align="left"> {{matchScore.playerName_1}}</td>
+            <td align="center">{{matchScore.playerGoals_1}} : {{matchScore.playerGoals_1}}</td>
+            <td align="right">{{matchScore.playerName_2}}</td>
+        </tr>
+    </table>
+</div>

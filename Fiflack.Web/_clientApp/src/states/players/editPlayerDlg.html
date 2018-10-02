@@ -1,0 +1,31 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">{{$ctrl.title}}</h3>
+</div>
+<div class="modal-body" id="modal-body">
+
+    <form name="player" novalidate>
+        <div>
+            <label>Login</label>
+            <input player-login type="text" name="login" ng-maxlength="50" required
+                   oryginal-login="{{$ctrl.playerLogin}}" ng-model="$ctrl.playerLogin" ng-model-options="{ debounce: 300 }" />
+
+            <span ng-if="player.login.$error.required && player.login.$touched">Login gracza jest wymagany.</span>
+            <span ng-if="player.login.$error.maxlength && player.login.$touched">Login gracza jest zbyt długi.</span>
+            <span ng-if="player.login.$pending.playerlogin">Sprawdzanie ....</span>
+            <span ng-if="player.login.$error.playerlogin">Login gracza jest już zajęty !</span>
+        </div>
+
+        <div>
+            <label>Name</label>
+            <input type="text" name="name" ng-model="$ctrl.playerName" required="" ng-maxlength="50" />
+
+            <span ng-if="player.name.$error.required && player.name.$touched">Nazwa gracza jest wymagana.</span>
+            <span ng-if="player.name.$error.maxlength && player.name.$touched">Nazwa gracza jest zbyt długa.</span>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()" ng-disabled="player.$invalid">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="$ctrl.cancel()">Anuluj</button>
+</div>
+

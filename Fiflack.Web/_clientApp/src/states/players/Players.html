@@ -1,0 +1,17 @@
+﻿<div class="container">
+
+    <div>
+        <h4>Gracze</h4>
+        <button ng-click="$ctrl.showNewPlayerDlg()">Dodaj</button>
+    </div>
+
+    <ul ng-repeat="player in $ctrl.players">
+        <li>
+            <a ng-click="$ctrl.showEditPlayerDlg(player.id)"> {{player.login}} </a>
+            <button ng-click="$ctrl.deletePlayer(player.id, player.login)">Usuń</button>
+        </li>
+    </ul>
+
+</div>
+
+
